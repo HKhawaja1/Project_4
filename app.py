@@ -1,6 +1,29 @@
-from flask import Flask
+from flask import Flask, render_template
+
+# Set up the Flask application object
 app = Flask(__name__)
 
+# Define routes for different sections of the website
 @app.route("/")
 def home():
-    return "Hello World, from Flask!"
+    return render_template("index.html")
+
+@app.route("/collections")
+def collections():
+    return render_template("collections.html")
+
+@app.route("/catalog")
+def catalog():
+    return render_template("catalog.html")
+
+@app.route("/sale")
+def sale():
+    return render_template("sale.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+# Run the application in debug mode (for development purposes)
+if __name__ == "__main__":
+    app.run(debug=True)
