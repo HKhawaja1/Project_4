@@ -1,20 +1,93 @@
 /* Style for the navigation bar */
+nav {
+    background-color: #fff;
+    padding: 20px 0; /* Increased top and bottom spacing */
+}
+
 nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
-    gap: 20px;
-    padding: 10px;
-    background-color: #f8f8f8;
+    gap: 40px; /* Increased spacing between links */
     margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 18px; /* Slightly larger font for better visibility */
+    font-weight: 500; /* Add some weight to the links */
 }
 
 nav ul li a:hover {
+    color: #007BFF; /* Hover effect for links */
+}
+
+/* Horizontal line under navigation */
+nav hr {
+    border: none;
+    border-top: 1px solid #d3d3d3;
+    margin: 10px 0; /* Spacing above and below the line */
+}
+
+/* Styling for the contact page content */
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+/* Breadcrumb and note wrapper */
+.breadcrumb-note-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align to the start of the container */
+    width: 95%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    margin: 0 auto; /* Center the wrapper horizontally */
+    padding: 0 15px;
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
     color: #007BFF;
+}
+
+.breadcrumb span {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Note styling */
+.note {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Map container */
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%; /* Adjust width as needed */
+    max-width: 1400px; /* Adjust for larger screens */
+    margin: 0 auto; /* Center the map container horizontally */
+}
+
+.map-container iframe {
+    width: 100%; /* Ensure iframe fills the container */
+    height: 500px; /* Increased height for better visibility */
+    border: 0;
 }
