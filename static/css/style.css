@@ -91,3 +91,78 @@ nav hr {
     height: 500px; /* Increased height for better visibility */
     border: 0;
 }
+
+/* Specific styling for the collections page */
+.collections-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the page content */
+}
+
+/* Breadcrumb styling */
+.collections-page .breadcrumb {
+    font-size: 16px;
+    margin-bottom: 25px; /* Added spacing below breadcrumb */
+    max-width: 1200px; /* Ensure it matches the page width */
+    margin-left: 0; /* Align with the grid */
+    padding-left: 10px; /* Slight adjustment for alignment with images */
+}
+
+.collections-page .breadcrumb a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.collections-page .breadcrumb span {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Collections heading */
+.collections-page .collections-heading {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Collections container */
+.collections-page .collections-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns per row */
+    grid-gap: 20px; /* Add spacing between items */
+    max-width: 1200px;
+    margin: 0 auto; /* Align grid to the center */
+    padding: 0 10px; /* Ensure slight padding for the grid */
+}
+
+/* Individual collection item */
+.collections-page .collection-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Space inside each item */
+    max-width: 275px;
+    margin: 0 auto; /* Center each item */
+}
+
+.collections-page .collection-item img {
+    width: 275px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.collections-page .collection-item h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.collections-page .collection-item p {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
