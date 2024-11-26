@@ -1,14 +1,15 @@
 /* Style for the navigation bar */
 nav {
     background-color: #fff;
-    padding: 20px 0; /* Increased top and bottom spacing */
+    padding: 50px 0; /* Increased top and bottom spacing */
+    margin: 0; /* Remove any default margin */
 }
 
 nav ul {
     display: flex;
     list-style: none;
     justify-content: center;
-    gap: 40px; /* Increased spacing between links */
+    gap: 60px; /* Increased spacing between links */
     margin: 0;
     padding: 0;
 }
@@ -28,7 +29,66 @@ nav ul li a:hover {
 nav hr {
     border: none;
     border-top: 1px solid #d3d3d3;
-    margin: 10px 0; /* Spacing above and below the line */
+    margin: 0; /* Remove margin to eliminate gap */
+    margin-top: 50px;
+    padding: 0;
+}
+
+/* Hero Image Section */
+.hero-image {
+    position: relative;
+    background-image: url('https://i.postimg.cc/brsV4XZY/Hero.jpg'); /* Hero image link */
+    background-size: cover;
+    background-position: center;
+    height: 800px; /* Adjust height as needed */
+    width: 100%;
+    margin: 0; /* Remove any default margin */
+    padding: 0;
+    border: none; /* Ensure no border is added */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Add a slight dark overlay */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure no default spacing around body */
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* Styling for the contact page content */
