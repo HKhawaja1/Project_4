@@ -493,10 +493,10 @@ body {
 /* Product Section */
 .product-section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px; /* Ensure alignment with truffles */
     gap: 30px;
-    margin: 50px auto;
-    max-width: 1000px;
 }
 
 .product {
@@ -517,3 +517,68 @@ body {
     text-transform: uppercase;
     color: #333;
 }
+
+/* Handmade Truffles Section */
+.truffles-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 0 20px;
+    max-width: 100%;
+    position: relative; /* Enable overlay positioning */
+}
+
+.truffles-wrapper {
+    position: relative;
+    display: inline-block; /* Ensure content stays inline with the image */
+}
+
+.truffles-image {
+    width: 100%; /* Ensure the image spans the full width of its container */
+    max-width: 1200px; /* Adjust this value if necessary */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Optional: Keep rounded corners */
+}
+
+.truffles-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0%; /* Align to the left inside the image */
+    transform: translate(0, -50%); /* Center vertically without shifting horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    text-align: left; /* Ensure text is left-aligned */
+    color: #C2EAFA; /* Text color */
+}
+
+.truffles-overlay h2 {
+    font-size: 70px; /* Adjust text size as needed */
+    font-weight: bold;
+    line-height: 1.5; /* Add spacing between lines */
+    text-transform: uppercase;
+}
+
+.truffles-overlay .cta-button {
+    margin-top: -20px;
+    background-color: #C2EAFA; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.truffles-overlay .cta-button:hover {
+    background-color: #a3d9f4; /* Lighter shade for hover effect */
+}
+
+
+
+
+
+
