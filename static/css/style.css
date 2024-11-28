@@ -577,8 +577,168 @@ body {
     background-color: #a3d9f4; /* Lighter shade for hover effect */
 }
 
+/* New Products Section */
+.new-products-section {
+    text-align: center;
+    margin: 50px auto;
+    padding: 0 20px;
+}
 
+.new-products-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
 
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.products-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
 
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    width: 100%;
+    max-width: 300px;
+}
 
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-card .product-price {
+    font-size: 18px;
+    color: #007BFF;
+    margin: 10px 0;
+}
+
+.product-card .add-to-cart {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #0056b3;
+}
+
+.view-all-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.view-all-section hr {
+    flex: 1;
+    max-width: calc(33.33% - 15px); /* Matches the width of one product card */
+    border: none;
+    border-top: 2px solid #C2EAFA;
+}
+
+.view-all-button {
+    background-color: #C2EAFA;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.view-all-button:hover {
+    background-color: #a3d9f4;
+}
+
+/* Chocolate Chip Cookies Section */
+.chocolate-chip-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 0 20px;
+    max-width: 1200px;
+    padding-top: 25px;
+}
+
+.chocolate-chip-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.chocolate-chip-image {
+    width: 50%; /* Adjust width as necessary */
+    border-radius: 8px;
+}
+
+.chocolate-chip-content {
+    max-width: 50%; /* Align text beside the image */
+    text-align: left;
+}
+
+.chocolate-chip-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #C2EAFA;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.chocolate-chip-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.chocolate-chip-content .cta-button {
+    text-decoration: none;
+    background-color: #C2EAFA;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.chocolate-chip-content .cta-button:hover {
+    background-color: #a3d9f4; /* Lighter shade for hover */
+}
+
+.best-sellers-section h2 {
+    text-align: center; /* Centers the text horizontally */
+    font-size: 28px; /* Adjust as needed */
+    color: #333; /* Optional: Change the color if desired */
+    margin-bottom: 20px; /* Add spacing below the title */
+    padding-top: 20px;
+}
