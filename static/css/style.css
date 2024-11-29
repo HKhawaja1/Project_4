@@ -653,6 +653,7 @@ body {
     justify-content: center;
     gap: 10px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .view-all-section hr {
@@ -741,4 +742,95 @@ body {
     color: #333; /* Optional: Change the color if desired */
     margin-bottom: 20px; /* Add spacing below the title */
     padding-top: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #f9f8f8; /* Light gray background for the entire footer container */
+    color: #333; /* Text color */
+    padding: 40px 0; /* Top and bottom padding */
+    margin: 0; /* Remove any default margin */
+    width: 100%; /* Full-width footer */
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Center align content within a fixed width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding inside the container */
+    background-color: #f9f8f8; /* Gray background matches footer */
+    box-sizing: border-box; /* Consistent box-sizing */
+}
+
+/* Footer Section Styling */
+.footer-section {
+    flex: 1; /* Equal space for all footer sections */
+    padding: 0 20px; /* Add spacing between sections */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333; /* Darker heading color */
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    color: #555; /* Muted text color */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #007BFF; /* Blue links */
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Copyright Section */
+.footer-copyright {
+    background-color: #C2EAFA; /* Light blue background for the copyright bar */
+    color: #333; /* Darker text for copyright */
+    padding: 10px 0; /* Add vertical padding */
+    text-align: center;
+    font-size: 14px;
+    margin: 0; /* No gaps or margins */
+    width: 100%; /* Full width of the page */
+    box-sizing: border-box; /* Consistent width including padding */
+}
+
+/* Remove gaps */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+}
+
+footer {
+    margin: 0; /* Ensure no gaps around the footer */
+    padding: 0;
+    box-sizing: border-box; /* Consistent padding */
 }
