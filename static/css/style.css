@@ -3,6 +3,7 @@ nav {
     background-color: #fff;
     padding: 50px 0; /* Increased top and bottom spacing */
     margin: 0; /* Remove any default margin */
+    padding-right: 50px;
 }
 
 nav ul {
@@ -423,9 +424,11 @@ body {
 }
 
 .catalog-page .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100%; /* Ensure the image spans the card's width */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image scales and crops proportionally */
+    border-radius: 8px; /* Optional: Rounded corners for styling */
+    display: block; /* Removes any potential inline spacing issues */
 }
 
 .catalog-page .product-name {
@@ -615,10 +618,11 @@ body {
 }
 
 .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 100%; /* Ensures the image spans the card's width */
+    height: 200px; /* Set a fixed height for uniformity */
+    object-fit: cover; /* Ensures the image scales and crops proportionally */
+    border-radius: 8px; /* Optional: Rounded corners for styling */
+    margin-bottom: 15px; /* Spacing below the image */
 }
 
 .product-card .product-name {
@@ -836,3 +840,14 @@ footer {
     padding: 0;
     box-sizing: border-box; /* Consistent padding */
 }
+
+/* Navigation Logo */
+.nav-logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    vertical-align: middle; /* Align with text vertically */
+    margin-right: 20px; /* Add spacing between the logo and "HOME" */
+    position: relative; /* Allows for fine-tuning its position */
+    top: -6px; /* Move the logo slightly upwards */
+}
+
