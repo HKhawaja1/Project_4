@@ -505,10 +505,12 @@ body {
 }
 
 .product img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 100%; /* Ensure the image spans the width of its container */
+    max-width: 300px; /* Set a maximum width for uniformity */
+    height: 200px; /* Set a fixed height to ensure all images are the same size */
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+    border-radius: 10px; /* Optional: Rounded corners for styling */
+    margin-bottom: 10px; /* Spacing below the image */
 }
 
 .product p {
