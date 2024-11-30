@@ -167,6 +167,8 @@ body {
 .contacts {
     flex: 1;
     text-align: left; /* Align to the left */
+    margin-left: -10px; /* Adjust the position slightly left */
+    padding-right: 40px;
 }
 
 .get-in-touch {
@@ -179,26 +181,35 @@ body {
     text-align: right; /* Align to the right */
 }
 
+.follow-us hr {
+    border: none;
+    border-top: 1px solid #d3d3d3; /* Light gray color */
+    margin: 10px 0; /* Space above and below the line */
+    width: 100%; /* Ensure the line spans the width of the content */
+  }  
+
 /* Common styles for headings */
 .contacts h3, .get-in-touch h3, .follow-us h3 {
     font-size: 20px;
     margin-bottom: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-left: 0; /* Ensure the heading aligns properly */
 }
 
 /* Contact info items */
 .contacts p {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    margin: -30px 0;
     font-size: 14px;
+    margin-left: -40px; /* Align content directly under the heading */
 }
 
 .contacts p img {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
+    margin-right: -20px; /* Adjust spacing between the icon and text */
+    width: 100px; /* Adjust icon width */
+    height: 100px; /* Adjust icon height */
 }
 
 /* Form styling for GET IN TOUCH */
@@ -849,5 +860,76 @@ footer {
     margin-right: 20px; /* Add spacing between the logo and "HOME" */
     position: relative; /* Allows for fine-tuning its position */
     top: -6px; /* Move the logo slightly upwards */
+}
+
+/* Default styling for all links */
+a {
+    color: inherit; /* Use the text color of the parent container */
+    text-decoration: none; /* Remove underline by default */
+}
+
+/* Hover effect for all links */
+a:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+    text-decoration: underline; /* Optional underline for hover */
+}
+
+/* Breadcrumb-specific styling */
+.breadcrumb a {
+    color: #007BFF; /* Default blue color for breadcrumb links */
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+.breadcrumb a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Optional underline for hover */
+}
+
+/* Footer links styling */
+.footer-section ul li a {
+    color: #333; /* Neutral color for footer links */
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+.footer-section ul li a:hover {
+    color: #007BFF; /* Hover effect for footer links */
+    text-decoration: underline; /* Optional underline for hover */
+}
+
+/* Follow Us section links styling */
+.follow-us p a {
+    color: #333; /* Neutral color for Follow Us links */
+    text-decoration: none; /* Ensure no underline by default */
+}
+
+.follow-us p a:hover {
+    color: #007BFF; /* Hover effect for Follow Us links */
+    text-decoration: underline; /* Optional underline for hover */
+}
+
+/* Add hover effect for collection images */
+.collections-container .collection-item a img {
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid transparent; /* Default border (invisible) */
+    border-radius: 8px; /* Match existing image styling */
+}
+
+.collections-container .collection-item a img:hover {
+    border-color: #007BFF; /* Blue border on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow effect */
+}
+
+/* Ensure collections-list links are not blue by default */
+.collections-list li a {
+    color: #333 !important; /* Override any inherited or global styles */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for collections-list links */
+.collections-list li a:hover {
+    color: #007BFF !important; /* Turn blue on hover */
+    text-decoration: underline; /* Optional underline for hover */
 }
 
