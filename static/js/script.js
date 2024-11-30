@@ -54,4 +54,24 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("No products found within the selected price range.");
     }
   });
+
+  // Show Feature Functionality
+  const showSelect = document.getElementById("show-products");
+
+  const updateVisibleProducts = () => {
+    const selectedValue = parseInt(showSelect.value); // Get the selected value (3, 6, 9)
+    products.forEach((product, index) => {
+      if (index < selectedValue) {
+        product.style.display = "block"; // Show the product
+      } else {
+        product.style.display = "none"; // Hide the product
+      }
+    });
+  };
+
+  // Initial update
+  updateVisibleProducts();
+
+  // Event listener for changes in the dropdown
+  showSelect.addEventListener("change", updateVisibleProducts);
 });

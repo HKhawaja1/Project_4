@@ -1024,3 +1024,19 @@ a:hover {
     background-color: #0056b3;
   }
   
+  .show-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .show-feature label {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  #show-products {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
