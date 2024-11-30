@@ -933,3 +933,94 @@ a:hover {
     text-decoration: underline; /* Optional underline for hover */
 }
 
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  #scrollToTop:hover {
+    background-color: #0056b3;
+  }
+  
+  #dynamic-content-section {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  #content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  #content-container .dynamic-item {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  #load-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #load-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .filter-by {
+    margin-top: 20px;
+  }
+  
+  .filter-by h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .price-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .price-inputs input {
+    width: 45%;
+    padding: 5px;
+    font-size: 14px;
+  }
+  
+  #price-filter-form button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #price-filter-form button:hover {
+    background-color: #0056b3;
+  }
+  
