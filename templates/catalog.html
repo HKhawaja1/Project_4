@@ -1,207 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog</title>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li>
-          <!-- Add logo with link -->
-          <a href="/">
-            <img src="/static/assets/Logo.png" alt="CandyWhirl Logo" class="nav-logo">
-          </a>
-        </li>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/collections">COLLECTIONS</a></li>
-        <li><a href="/catalog">CATALOG</a></li>
-        <li><a href="/sale">SALE</a></li>
-        <li><a href="/contact">CONTACT US</a></li>
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Catalog Page Content -->
+<div class="catalog-page">
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="/">Home</a> > <span>Bakery</span>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main-section">
+    <!-- Collections Sidebar -->
+    <div class="collections-sidebar">
+      <h2 class="collections-title">COLLECTIONS</h2>
+      <ul class="collections-list">
+        <li><a href="/catalog">Bakery</a></li>
+        <li><a href="/candy">Candy</a></li>
+        <li><a href="/chocolate">Chocolate</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+        <li><a href="/sale">Sale</a></li>
       </ul>
-      <hr>
-    </nav>
 
-    <!-- Catalog Page Content -->
-    <div class="catalog-page">
-      <!-- Breadcrumb -->
-      <div class="breadcrumb">
-        <a href="/">Home</a> > <span>Bakery</span>
+      <!-- New Collection Image -->
+      <div class="new-collection">
+        <img src="https://i.ibb.co/GM1Jc8L/New-Collection.jpg" alt="New Collection">
       </div>
 
-      <!-- Main Section -->
-      <div class="main-section">
-        <!-- Collections Sidebar -->
-        <div class="collections-sidebar">
-          <h2 class="collections-title">COLLECTIONS</h2>
-          <ul class="collections-list">
-            <li><a href="/catalog">Bakery</a></li>
-            <li><a href="/candy">Candy</a></li>
-            <li><a href="/chocolate">Chocolate</a></li>
-            <li><a href="/cookies">Cookies</a></li>
-            <li><a href="/sale">Sale</a></li>
-          </ul>
+      <!-- Filter by Price -->
+      <div class="filter-section">
+        <h3>FILTER BY</h3>
+        <form id="price-filter-form">
+          <label for="min-price">Price</label>
+          <input type="number" id="min-price" placeholder="Min">
+          <input type="number" id="max-price" placeholder="Max">
+          <button type="submit">Apply</button>
+        </form>
+      </div>
+    </div>
 
-          <!-- New Collection Image -->
-          <div class="new-collection">
-            <img src="https://i.ibb.co/GM1Jc8L/New-Collection.jpg" alt="New Collection">
-          </div>
+    <!-- Bakery Content -->
+    <div class="bakery-content">
+      <h1 class="section-title">Bakery</h1>
+      <p class="description">
+        Discover the finest selection of baked goods made with love and passion.
+        From traditional recipes to modern favorites, our bakery items are perfect
+        for any occasion. Enjoy the rich flavors, soft textures, and quality
+        ingredients that make every bite a delight. Shop our exclusive bakery
+        collection today!
+      </p>
 
-          <!-- Filter by Price -->
-          <div class="filter-section">
-            <h3>FILTER BY</h3>
-            <form id="price-filter-form">
-              <label for="min-price">Price</label>
-              <input type="number" id="min-price" placeholder="Min">
-              <input type="number" id="max-price" placeholder="Max">
-              <button type="submit">Apply</button>
-            </form>
-          </div>
+      <div class="controls">
+        <label for="show-products">Show:</label>
+        <select id="show-products">
+          <option value="3">3</option>
+          <option value="6">6</option>
+          <option value="9" selected>9</option>
+        </select>
+      </div>
+      <br>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/BBb9Dv0/Catalog-Croissant.jpg" alt="Croissants">
+          <h3 class="product-name">Croissants</h3>
+          <p class="product-price">€5.00</p>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
 
-        <!-- Bakery Content -->
-        <div class="bakery-content">
-          <h1 class="section-title">Bakery</h1>
-          <p class="description">
-            Discover the finest selection of baked goods made with love and passion.
-            From traditional recipes to modern favorites, our bakery items are perfect
-            for any occasion. Enjoy the rich flavors, soft textures, and quality
-            ingredients that make every bite a delight. Shop our exclusive bakery
-            collection today!
-          </p>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/SPssXnj/Catalog-Bagels.jpg" alt="Bagels">
+          <h3 class="product-name">Bagels</h3>
+          <p class="product-price">€4.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-          <div class="controls">
-            <label for="show-products">Show:</label>
-            <select id="show-products">
-              <option value="3">3</option>
-              <option value="6">6</option>
-              <option value="9" selected>9</option>
-            </select>
-          </div>
-          <br>
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/HXQMSpj/Catalog-Muffins.jpg" alt="Muffins">
+          <h3 class="product-name">Muffins</h3>
+          <p class="product-price">€6.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-          <!-- Products Grid -->
-          <div class="products-grid">
-            <!-- Product Card 1 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/BBb9Dv0/Catalog-Croissant.jpg" alt="Croissants">
-              <h3 class="product-name">Croissants</h3>
-              <p class="product-price">€5.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <!-- Product Card 4 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/99KY2QB/Catalog-Cupcakes.jpg" alt="Cupcakes">
+          <h3 class="product-name">Cupcakes</h3>
+          <p class="product-price">€7.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-            <!-- Product Card 2 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/SPssXnj/Catalog-Bagels.jpg" alt="Bagels">
-              <h3 class="product-name">Bagels</h3>
-              <p class="product-price">€4.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <!-- Product Card 5 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/L8jfCQM/Catalog-Pies.jpg" alt="Pies">
+          <h3 class="product-name">Pies</h3>
+          <p class="product-price">€8.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-            <!-- Product Card 3 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/HXQMSpj/Catalog-Muffins.jpg" alt="Muffins">
-              <h3 class="product-name">Muffins</h3>
-              <p class="product-price">€6.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <!-- Product Card 6 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/1LFZXDS/Catalog-Doughnuts.jpg" alt="Doughnuts">
+          <h3 class="product-name">Doughnuts</h3>
+          <p class="product-price">€5.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-            <!-- Product Card 4 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/99KY2QB/Catalog-Cupcakes.jpg" alt="Cupcakes">
-              <h3 class="product-name">Cupcakes</h3>
-              <p class="product-price">€7.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <!-- Product Card 7 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/XsKWRHq/Catalog-Tarts.jpg" alt="Tarts">
+          <h3 class="product-name">Tarts</h3>
+          <p class="product-price">€6.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-            <!-- Product Card 5 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/L8jfCQM/Catalog-Pies.jpg" alt="Pies">
-              <h3 class="product-name">Pies</h3>
-              <p class="product-price">€8.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
+        <!-- Product Card 8 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/MsrmdHR/Catalog-Brownies.jpg" alt="Brownies">
+          <h3 class="product-name">Brownies</h3>
+          <p class="product-price">€7.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-            <!-- Product Card 6 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/1LFZXDS/Catalog-Doughnuts.jpg" alt="Doughnuts">
-              <h3 class="product-name">Doughnuts</h3>
-              <p class="product-price">€5.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 7 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/XsKWRHq/Catalog-Tarts.jpg" alt="Tarts">
-              <h3 class="product-name">Tarts</h3>
-              <p class="product-price">€6.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 8 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/MsrmdHR/Catalog-Brownies.jpg" alt="Brownies">
-              <h3 class="product-name">Brownies</h3>
-              <p class="product-price">€7.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 9 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/QQPcr4K/Catalog-Loaves.jpg" alt="Bread Loaves">
-              <h3 class="product-name">Bread Loaves</h3>
-              <p class="product-price">€4.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
+        <!-- Product Card 9 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/QQPcr4K/Catalog-Loaves.jpg" alt="Bread Loaves">
+          <h3 class="product-name">Bread Loaves</h3>
+          <p class="product-price">€4.00</p>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
     </div>
-
-      <!-- Footer Section -->
-  <footer>
-    <div class="footer-container">
-      <!-- About Section -->
-      <div class="footer-section about">
-        <h3>ABOUT CANDYWHIRL</h3>
-        <p>
-          At CandyWhirl, we bring the joy of sweets to your doorstep. From delectable chocolates to scrumptious cookies, we have been crafting happiness since 2005. Join us for a taste of delight in every bite!
-        </p>
-      </div>
-
-      <!-- Categories Section -->
-      <div class="footer-section categories">
-        <h3>CATEGORIES</h3>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/collections">Collections</a></li>
-          <li><a href="/catalog">Catalog</a></li>
-          <li><a href="/sale">Sale</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
-      </div>
-
-      <!-- Contacts Section -->
-      <div class="footer-section contacts">
-        <h3>CONTACTS</h3>
-        <p>Candyland, 2 Bóthar Irwin, Eyre St, Galway</p>
-        <p>(091) 476-6570</p>
-        <p>7 Days a week from 10:00 am to 6:00 pm</p>
-        <p>info@candywhirl.com</p>
-      </div>
-    </div>
-
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop">⬆ Scroll to Top</button>
-
-    <!-- Copyright Section -->
-    <div class="footer-copyright">
-      <p>&copy; CandyWhirl. All Right Reserved</p>
-    </div>
-  </footer>
-  <script src="/static/js/script.js"></script>
-  </body>
-</html>
+  </div>
+</div>
+{% endblock %}

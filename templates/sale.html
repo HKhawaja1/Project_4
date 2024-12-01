@@ -1,202 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sale</title>
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li>
-          <!-- Add logo with link -->
-          <a href="/">
-            <img src="/static/assets/Logo.png" alt="CandyWhirl Logo" class="nav-logo">
-          </a>
-        </li>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/collections">COLLECTIONS</a></li>
-        <li><a href="/catalog">CATALOG</a></li>
-        <li><a href="/sale">SALE</a></li>
-        <li><a href="/contact">CONTACT US</a></li>
-      </ul>
-      <hr>
-    </nav>
+{% extends "base.html" %}
 
-    <!-- Catalog Page Content -->
-    <div class="catalog-page">
-      <!-- Breadcrumb -->
-      <div class="breadcrumb">
-        <a href="/">Home</a> > <span>Sale</span>
+{% block content %}
+<!-- Catalog Page Content -->
+<div class="catalog-page">
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="/">Home</a> > <span>Sale</span>
+  </div>
+
+  <!-- Main Section -->
+  <div class="main-section">
+    <!-- Collections Sidebar -->
+    <div class="collections-sidebar">
+      <h2 class="collections-title">COLLECTIONS</h2>
+      <ul class="collections-list">
+        <li><a href="/catalog">Bakery</a></li>
+        <li><a href="/candy">Candy</a></li>
+        <li><a href="/chocolate">Chocolate</a></li>
+        <li><a href="/cookies">Cookies</a></li>
+        <li><a href="/sale">Sale</a></li>
+      </ul>
+
+      <!-- New Collection Image -->
+      <div class="new-collection">
+        <img src="https://i.ibb.co/GM1Jc8L/New-Collection.jpg" alt="New Collection">
       </div>
 
-      <!-- Main Section -->
-      <div class="main-section">
-        <!-- Collections Sidebar -->
-        <div class="collections-sidebar">
-          <h2 class="collections-title">COLLECTIONS</h2>
-          <ul class="collections-list">
-            <li><a href="/catalog">Bakery</a></li>
-            <li><a href="/candy">Candy</a></li>
-            <li><a href="/chocolate">Chocolate</a></li>
-            <li><a href="/cookies">Cookies</a></li>
-            <li><a href="/sale">Sale</a></li>
-          </ul>
-
-          <!-- New Collection Image -->
-          <div class="new-collection">
-            <img src="https://i.ibb.co/GM1Jc8L/New-Collection.jpg" alt="New Collection">
-          </div>
-                    <!-- Filter by Price -->
-                    <div class="filter-by">
-                      <h3>FILTER BY</h3>
-                      <form id="price-filter-form">
-                        <label for="min-price">Price</label>
-                        <input type="number" id="min-price" placeholder="Min" />
-                        <input type="number" id="max-price" placeholder="Max" />
-                        <button type="submit">Apply</button>
-                      </form>
-                    </div>
-        </div>
-
-        <!-- Sale Content -->
-        <div class="sale-content">
-          <h1 class="section-title">Sale</h1>
-          <p class="description">
-            Take advantage of our sweet deals! From classic favorites to seasonal specials, our sale items are perfect for every occasion. Stock up on your favorite treats at unbeatable prices!
-          </p>
-
-          <div class="controls">
-            <label for="show-products">Show:</label>
-            <select id="show-products">
-              <option value="3">3</option>
-              <option value="6">6</option>
-              <option value="9" selected>9</option>
-            </select>
-          </div>
-          <br>
-
-          <!-- Products Grid -->
-          <div class="products-grid">
-            <!-- Product Card 1 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/j5CXrMW/Catalog-Chocolate-Truffles.jpg" alt="Truffle Assortment">
-              <h3 class="product-name">Truffle Assortment</h3>
-              <p class="product-price">€8.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 2 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/0mpjnB2/Catalog-Chocolate-Caramels.jpg" alt="Caramel Chocolates">
-              <h3 class="product-name">Caramel Chocolates</h3>
-              <p class="product-price">€6.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 3 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/d4ch25c/Catalog-Sugar-Cookies.jpg" alt="Sugar Cookies">
-              <h3 class="product-name">Sugar Cookies</h3>
-              <p class="product-price">€3.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 4 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/JcCTRrz/Catalog-Gummy.jpg" alt="Gummy Bears">
-              <h3 class="product-name">Gummy Bears</h3>
-              <p class="product-price">€2.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 5 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/NS44j87/Catalog-Mint-Chocolate.jpg" alt="Mint Chocolate">
-              <h3 class="product-name">Mint Chocolate</h3>
-              <p class="product-price">€4.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 6 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/sb0f4Fp/Catalog-Cotton-Candy.jpg" alt="Cotton Candy">
-              <h3 class="product-name">Cotton Candy</h3>
-              <p class="product-price">€3.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 7 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/gmwcbsf/Catalog-Chocolate-Chip-Cookies.jpg" alt="Chocolate Chip Cookies">
-              <h3 class="product-name">Chocolate Chip Cookies</h3>
-              <p class="product-price">€3.75</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 8 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/k64NtZ1/Catalog-Dark-Chocolate.jpg" alt="Dark Chocolate">
-              <h3 class="product-name">Dark Chocolate</h3>
-              <p class="product-price">€5.00</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-
-            <!-- Product Card 9 -->
-            <div class="product-card">
-              <img src="https://i.ibb.co/9cYPm5d/Catalog-Almond-Chocolate.jpg" alt="Almond Chocolates">
-              <h3 class="product-name">Almond Chocolates</h3>
-              <p class="product-price">€6.50</p>
-              <button class="add-to-cart">Add to Cart</button>
-            </div>
-          </div>
-        </div>
+      <!-- Filter by Price -->
+      <div class="filter-by">
+        <h3>FILTER BY</h3>
+        <form id="price-filter-form">
+          <label for="min-price">Price</label>
+          <input type="number" id="min-price" placeholder="Min" />
+          <input type="number" id="max-price" placeholder="Max" />
+          <button type="submit">Apply</button>
+        </form>
       </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-      <div class="footer-container">
-        <!-- About Section -->
-        <div class="footer-section about">
-          <h3>ABOUT CANDYWHIRL</h3>
-          <p>
-            At CandyWhirl, we bring the joy of sweets to your doorstep. From delectable chocolates to scrumptious cookies, we have been crafting happiness since 2005. Join us for a taste of delight in every bite!
-          </p>
+    <!-- Sale Content -->
+    <div class="sale-content">
+      <h1 class="section-title">Sale</h1>
+      <p class="description">
+        Take advantage of our sweet deals! From classic favorites to seasonal specials, our sale items are perfect for every occasion. Stock up on your favorite treats at unbeatable prices!
+      </p>
+
+      <div class="controls">
+        <label for="show-products">Show:</label>
+        <select id="show-products">
+          <option value="3">3</option>
+          <option value="6">6</option>
+          <option value="9" selected>9</option>
+        </select>
+      </div>
+      <br>
+
+      <!-- Products Grid -->
+      <div class="products-grid">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/j5CXrMW/Catalog-Chocolate-Truffles.jpg" alt="Truffle Assortment">
+          <h3 class="product-name">Truffle Assortment</h3>
+          <p class="product-price">€8.50</p>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
 
-        <!-- Categories Section -->
-        <div class="footer-section categories">
-          <h3>CATEGORIES</h3>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/collections">Collections</a></li>
-            <li><a href="/catalog">Catalog</a></li>
-            <li><a href="/sale">Sale</a></li>
-            <li><a href="/contact">Contact Us</a></li>
-          </ul>
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/0mpjnB2/Catalog-Chocolate-Caramels.jpg" alt="Caramel Chocolates">
+          <h3 class="product-name">Caramel Chocolates</h3>
+          <p class="product-price">€6.00</p>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
 
-        <!-- Contacts Section -->
-        <div class="footer-section contacts">
-          <h3>CONTACTS</h3>
-          <p>Candyland, 2 Bóthar Irwin, Eyre St, Galway</p>
-          <p>(091) 476-6570</p>
-          <p>7 Days a week from 10:00 am to 6:00 pm</p>
-          <p>info@candywhirl.com</p>
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/d4ch25c/Catalog-Sugar-Cookies.jpg" alt="Sugar Cookies">
+          <h3 class="product-name">Sugar Cookies</h3>
+          <p class="product-price">€3.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/JcCTRrz/Catalog-Gummy.jpg" alt="Gummy Bears">
+          <h3 class="product-name">Gummy Bears</h3>
+          <p class="product-price">€2.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/NS44j87/Catalog-Mint-Chocolate.jpg" alt="Mint Chocolate">
+          <h3 class="product-name">Mint Chocolate</h3>
+          <p class="product-price">€4.50</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/sb0f4Fp/Catalog-Cotton-Candy.jpg" alt="Cotton Candy">
+          <h3 class="product-name">Cotton Candy</h3>
+          <p class="product-price">€3.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 7 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/gmwcbsf/Catalog-Chocolate-Chip-Cookies.jpg" alt="Chocolate Chip Cookies">
+          <h3 class="product-name">Chocolate Chip Cookies</h3>
+          <p class="product-price">€3.75</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 8 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/k64NtZ1/Catalog-Dark-Chocolate.jpg" alt="Dark Chocolate">
+          <h3 class="product-name">Dark Chocolate</h3>
+          <p class="product-price">€5.00</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <!-- Product Card 9 -->
+        <div class="product-card">
+          <img src="https://i.ibb.co/9cYPm5d/Catalog-Almond-Chocolate.jpg" alt="Almond Chocolates">
+          <h3 class="product-name">Almond Chocolates</h3>
+          <p class="product-price">€6.50</p>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
-
-        <!-- Scroll to Top Button -->
-  <button id="scrollToTop">⬆ Scroll to Top</button>
-
-      <!-- Copyright Section -->
-      <div class="footer-copyright">
-        <p>&copy; CandyWhirl. All Right Reserved</p>
-      </div>
-    </footer>
-    <script src="/static/js/script.js"></script>
-  </body>
-</html>
+    </div>
+  </div>
+</div>
+{% endblock %}
