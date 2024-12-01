@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>View Inquiries</title>
+</head>
+<body>
+    <h1>Contact Inquiries</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Created At</th>
+            <th>Actions</th>
+        </tr>
+        {% for inquiry in inquiries %}
+        <tr>
+            <td>{{ inquiry.id }}</td>
+            <td>{{ inquiry.name }}</td>
+            <td>{{ inquiry.email }}</td>
+            <td>{{ inquiry.message }}</td>
+            <td>{{ inquiry.created_at }}</td>
+            <td>
+                <a href="{{ url_for('update_inquiry', inquiry_id=inquiry.id) }}">Edit</a>
+                <form action="{{ url_for('delete_inquiry', inquiry_id=inquiry.id) }}" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('Are you sure?')">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Edit Inquiry</title>
+</head>
+<body>
+    <h1>Edit Inquiry</h1>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{ inquiry.name }}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ inquiry.email }}" required><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required>{{ inquiry.message }}</textarea><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
