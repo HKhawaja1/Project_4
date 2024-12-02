@@ -119,3 +119,31 @@ Follow these steps to deploy the CandyWhirl application to Render:
 1. Once deployed, Render will provide a unique URL for the web app in the Render dashboard.
    - Link: https://project-4-6lif.onrender.com
 2. Visit this URL to access the deployed application.
+
+---
+
+## References
+ChatGPT
+https://pixabay.com/
+https://www.pexels.com/
+https://www.needpix.com/
+https://logo.com/
+https://render.com/
+https://www.youtube.com/watch?v=IBfj_0Zf2Mo
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+https://www.w3schools.com/jsref/jsref_number_nan.asp
+https://www.w3schools.com/jsref/met_document_getelementbyid.asp
+https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+https://www.youtube.com/watch?v=Q2QmST-cSwc
+https://www.youtube.com/watch?v=q-Q8c56zGJ8&list=PLXpWu84ZnHT-e-f6d_r6Q21cTsGAS4xXX
+https://www.w3schools.com/css/css_grid.asp
+https://www.w3schools.com/css/css3_flexbox.asp
+https://www.w3schools.com/jsref/jsref_parsefloat.asp
+https://www.w3schools.com/css/css_boxmodel.asp
+https://www.w3schools.com/howto/howto_css_hero_image.asp
+https://flask-wtf.readthedocs.io/en/1.2.x/
+https://flask.palletsprojects.com/en/stable/patterns/templateinheritance/
+https://www.youtube.com/watch?v=uNmWxvvyBGU
+https://www.geeksforgeeks.org/declaring-models-in-flask/
+https://flask.palletsprojects.com/en/stable/views/
