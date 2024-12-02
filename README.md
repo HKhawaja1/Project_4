@@ -57,7 +57,7 @@ Welcome to CandyWhirl, a modern web application for browsing and exploring a wid
 ![Contact Page](https://i.ibb.co/zhDtz5g/image.png)
 
 ### **List Contacts Page (`list_contacts.html`)**
-- **Purpose**: Allows users to review and manage submitted inquiries.
+- **Purpose**: Upon pressing the 'View Your Messages' button, users will be able to review and manage submitted inquiries.
 - **Features**:
   - Displays a paginated list of submitted contact inquiries.
   - Includes **Edit** and **Delete** buttons for each inquiry.
