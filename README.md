@@ -23,15 +23,14 @@ Welcome to CandyWhirl, a modern web application for browsing and exploring a wid
   - A hero image with a welcome message and a "Shop Now" call-to-action button.
   - Overview of the collections available on the website.
   - Links to popular categories for easy navigation.
-![Home Page](https://i.ibb.co/bvgRMHq/image.png)
-
+  ![Home Page](https://i.ibb.co/bvgRMHq/image.png)
 
 ### **Collections Page (`collections.html`)**
 - **Purpose**: Provides a broad overview of all product categories (e.g., Bakery, Candy, Chocolate, Cookies, and Sale).
 - **Features**:
   - Grid layout with images and titles for each collection.
   - Links redirect users to the respective category pages.
-![Collections Page](https://i.ibb.co/6mpybwx/image.png)
+  ![Collections Page](https://i.ibb.co/6mpybwx/image.png)
 
 ### **Catalog Page (`catalog.html`)**
 - **Purpose**: Displays the products in the selected category (e.g., Bakery).
@@ -39,14 +38,14 @@ Welcome to CandyWhirl, a modern web application for browsing and exploring a wid
   - **Filter by Price**: Allows users to filter products within a specified price range.
   - **Show Products Dropdown**: Adjusts the number of products displayed per page (e.g., 3, 6, or 9).
   - **Add to Cart Button**: Placeholder functionality for adding products to a cart.
-![Catalog Page](https://i.ibb.co/PcG52dB/image.png)
+  ![Catalog Page](https://i.ibb.co/PcG52dB/image.png)
 
 ### **Sale Page (`sale.html`)**
 - **Purpose**: Displays discounted items or special offers.
 - **Features**:
   - Similar layout to the catalog page with a focus on products currently on sale.
   - Dynamic pricing to highlight discounted items.
-![Sale Page](https://i.ibb.co/B4W2FNZ/image.png)
+  ![Sale Page](https://i.ibb.co/B4W2FNZ/image.png)
 
 ### **Contact Us Page (`contact.html`)**
 - **Purpose**: Enables visitors to get in touch with the store.
@@ -54,21 +53,21 @@ Welcome to CandyWhirl, a modern web application for browsing and exploring a wid
   - **Google Maps Integration**: Displays the store's location.
   - **Contact Form**: Includes fields for Name, Email, and Message with server-side validation.
   - **Follow Us Section**: Links to social media platforms for engagement.
-![Contact Page](https://i.ibb.co/zhDtz5g/image.png)
+  ![Contact Page](https://i.ibb.co/zhDtz5g/image.png)
 
 ### **List Contacts Page (`list_contacts.html`)**
 - **Purpose**: Upon pressing the 'View Your Messages' button, users will be able to review and manage submitted inquiries.
 - **Features**:
   - Displays a paginated list of submitted contact inquiries.
   - Includes **Edit** and **Delete** buttons for each inquiry.
-![Contact Inquiries Page](https://i.ibb.co/4Ks8WNw/image.png)
+  ![Contact Inquiries Page](https://i.ibb.co/4Ks8WNw/image.png)
 
 ### **Chocolate, Candy, and Cookies Pages**
 - **Purpose**: Showcase specific product categories.
 - **Features**:
   - Similar layout to the catalog page.
   - Highlights unique products within each category.
-  - ![Chocolate Page](https://i.ibb.co/R38W1Jn/image.png)
+  ![Chocolate Page](https://i.ibb.co/R38W1Jn/image.png)
 
 ---
 
@@ -80,6 +79,40 @@ Welcome to CandyWhirl, a modern web application for browsing and exploring a wid
 
 ---
 
+## Deployment to Render
 
+Follow these steps to deploy the CandyWhirl application to Render:
 
+### **Step 1: Set Up PostgreSQL on Render**
+1. Create a PostgreSQL instance on Render.
+2. Copy the `DATABASE_URL` provided by Render.
+   ![PostgreSQL Render](https://i.ibb.co/b2F98NT/image.png)
 
+### **Step 2: Create a New Web Service**
+1. In your Render dashboard, click **New > Web Service**.
+2. Connect your GitHub repository containing the CandyWhirl project.
+3. Configure the following:
+   - **Environment**: Python 3
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `gunicorn app:app`
+   - Add the following environment variables:
+     - `DATABASE_URL`: The URL from Render PostgreSQL instance.
+     - `SECRET_KEY`: A secure key for your Flask application.
+     - ![Create Web Service](https://i.ibb.co/55j52xb/image.png)
+
+### **Step 3: Initialize the Database**
+1. Open the Shell tab for your Render web service.
+2. Run the following commands to initialize the database:
+   ```bash
+   flask db init
+   flask db migrate -m "Initial migration"
+   flask db upgrade
+
+### **Step 4: Redeploy the Application**
+1. Commit any changes to your GitHub repository.
+2. Redeploy the application on Render by pushing changes to your repository.
+
+### **Step 5: Accessing the Web App**
+1. Once deployed, Render will provide a unique URL for your web app in the Render dashboard.
+   - Example: https://candywhirl.onrender.com
+2. Visit this URL to access your deployed application.
