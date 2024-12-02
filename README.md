@@ -2,6 +2,9 @@
 
 Welcome to CandyWhirl, a modern web application for browsing and exploring a wide variety of bakery and sweet treats. The project uses Flask as the backend framework and PostgreSQL as the database.
 
+- [GitHub Repository](https://github.com/HKhawaja1/Project_4)
+- [Live Web Application on Render](https://project-4-6lif.onrender.com)
+
 ---
 
 ## Features
