@@ -1160,3 +1160,56 @@ a:hover {
     background-color: gold; /* Changes to a darker yellow on hover */
     color: black; /* Keeps text color black */
 }
+
+/* --- Media Queries --- */
+
+/* Large screens (desktops) */
+@media (min-width: 1200px) {
+    .hero-image {
+        height: 600px; /* Adjust hero image height */
+    }
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr); /* Show 4 products in a row */
+    }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    nav ul {
+        gap: 30px; /* Adjust spacing in the navigation bar */
+    }
+    .collections-sidebar {
+        max-width: 250px; /* Adjust sidebar width */
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 products in a row */
+    }
+    .contact-sections {
+        flex-direction: column; /* Stack contact sections vertically */
+        gap: 30px;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 767px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 15px; /* Reduce spacing between links */
+    }
+    .hero-image {
+        height: 400px; /* Reduce hero image height */
+    }
+    .products-grid {
+        grid-template-columns: 1fr; /* Show 1 product per row */
+    }
+    .collections-sidebar {
+        display: none; /* Hide the sidebar for better space utilization */
+    }
+    .contact-sections {
+        flex-direction: column; /* Stack contact sections vertically */
+    }
+    .footer-container {
+        flex-direction: column; /* Stack footer sections vertically */
+        align-items: center;
+    }
+}
