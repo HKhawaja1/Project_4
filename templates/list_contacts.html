@@ -22,9 +22,9 @@
         <td>
           <a href="{{ url_for('update_contact', inquiry_id=inquiry.id) }}" class="btn btn-edit">Edit</a>
           <form action="{{ url_for('delete_contact', inquiry_id=inquiry.id) }}" method="post" style="display:inline;">
-            {{ csrf_token() }} <!-- Include CSRF token -->
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"> <!-- Add the CSRF token -->
             <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure?')">Delete</button>
-          </form>
+          </form>          
         </td>
       </tr>
       {% endfor %}
