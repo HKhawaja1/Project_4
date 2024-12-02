@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, flash, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from flask_wtf.csrf import CSRFProtect
+from flask_migrate import Migrate
 from wtforms import StringField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Email
 from models import db, ContactInquiry
@@ -19,9 +20,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key')
 
-# Initialize database and CSRF protection
+# Initialize database, CSRF protection, and Flask-Migrate
 db.init_app(app)
 csrf = CSRFProtect(app)
+migrate = Migrate(app, db)
 
 # Define the ContactForm class using Flask-WTF
 class ContactForm(FlaskForm):
