@@ -68,6 +68,7 @@ Welcome to CandyWhirl, a modern web application for browsing and exploring a wid
 - **Features**:
   - Similar layout to the catalog page.
   - Highlights unique products within each category.
+  - ![Chocolate Page](https://i.ibb.co/R38W1Jn/image.png)
 
 ---
 
