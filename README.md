@@ -118,4 +118,4 @@ Follow these steps to deploy the CandyWhirl application to Render:
 ### **Step 5: Accessing the Web App**
 1. Once deployed, Render will provide a unique URL for the web app in the Render dashboard.
    - Link: https://project-4-6lif.onrender.com
-2. Visit this URL to access your deployed application.
+2. Visit this URL to access the deployed application.
