@@ -124,6 +124,7 @@ Follow these steps to deploy the CandyWhirl application to Render:
 
 ## References
 - ChatGPT
+- https://www.motocms.com/website-templates/demo/102547.html
 - https://pixabay.com/
 - https://www.pexels.com/
 - https://www.needpix.com/
